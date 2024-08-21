@@ -3,6 +3,7 @@ const cors = require("cors"); // Import the cors package
 const app = express();
 const port = 3001;
 const AccountsRouter = require('./apis/Accounts');
+const AuthRouter = require('./apis/Auth');
 
 // Configure CORS
 const allowedOrigins = ['http://localhost:3002', 'https://victorsingh.ca'];
@@ -24,6 +25,8 @@ app.use(express.json());
 
 // Import Routes
 app.use('/accounts', AccountsRouter);
+app.use('/auth', AuthRouter);
+
 
 app.get("/", (req, res) => {
     res.json({message: "API running"});
