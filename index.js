@@ -6,7 +6,7 @@ const AccountsRouter = require('./apis/Accounts');
 const AuthRouter = require('./apis/Auth');
 
 // Configure CORS
-const allowedOrigins = ['http://localhost:3002', 'https://victorsingh.ca', 'https://v2-frontend-victor.vercel.app'];
+const allowedOrigins = ['http://localhost:3002', 'https://victorsingh.ca', 'https://v2-frontend-victor.vercel.app', 'http://192.168.2.30:3001', 'http://localhost:3001'];
 
 app.use(cors({
     origin: function (origin, callback) {
