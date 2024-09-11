@@ -11,7 +11,6 @@ const JWT_SECRET = "keebgram-auth";
 router.post("/", async (req, res) => {
   try {
     const { email, password } = req.body;
-    console.log(req.body)
     const result = await pool.query("SELECT * FROM accounts WHERE email = $1", [email]);
 
     if (result.rows.length === 0) {

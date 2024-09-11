@@ -37,6 +37,7 @@ router.get("/:token", async (req, res) => {
       [result.rows[0]?.id]
     );
     delete user.rows[0].password;
+    console.log(user?.rows[0]);
     res.json(user.rows[0]);
   } catch (error) {
     console.error(error);
